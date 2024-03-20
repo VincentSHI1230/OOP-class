@@ -1,0 +1,9 @@
+.vs/
+.vscode/
+.idea/
+Debug/
+Release/
+
+*.sln
+*.vcxproj
+*.vcxproj.*
