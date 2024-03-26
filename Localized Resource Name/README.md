@@ -4,6 +4,8 @@
 
 因此，我编写了这个小工具，利用 Windows 文件系统的特性 Localized Resource Name (本地化资源名称 | LRN) 来为文件夹设置友好别名。你需要具有 Python 环境，并将 `文件夹别名.py` 复制到需要设置或修改别名的文件夹下，然后运行。现在，你可以试试为当前所在的文件夹 `Localized Resource Name` 设置别名 `文件夹别名`，然后打开 Windows 资源管理器看看效果。
 
+如果你需要 Python 环境，可以在 [python.org](https://www.python.org/) - Downloads - Windows - Download for Windows 标签中下载安装即可。
+
 ```
 Vincent SHI | 史文朔 (c) 2024
 date: 2024-03-21
