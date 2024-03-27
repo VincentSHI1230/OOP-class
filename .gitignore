@@ -3,7 +3,10 @@
 .idea/
 Debug/
 Release/
+test/
 
 *.sln
 *.vcxproj
 *.vcxproj.*
+test.*
+*.test.*
