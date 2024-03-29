@@ -1,9 +1,11 @@
 .vs/
 .vscode/
 .idea/
+.debug/
 Debug/
 Release/
 test/
+cmake-build-debug/
 
 *.sln
 *.vcxproj
