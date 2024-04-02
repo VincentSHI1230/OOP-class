@@ -6,6 +6,7 @@ Debug/
 Release/
 test/
 cmake-build-debug/
+build/
 
 *.sln
 *.vcxproj
