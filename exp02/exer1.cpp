@@ -8,7 +8,6 @@
  */
 
 #include <iostream>
-using namespace std;
 
 #define CHECK
 
@@ -28,12 +27,14 @@ int main()
 
 void input(int& hours24, int& minutes)
 {
-    cout << "请输入 24 小时制时间 (H:m): ";
+    //  [out]   int&    hours24
+    //  [out]   int&    minutes
+    std::cout << "请输入 24 小时制时间 (H:m): ";
     char _;
-    cin >> hours24 >> _ >> minutes;
+    std::cin >> hours24 >> _ >> minutes;
 #ifdef CHECK
     if (hours24 < 0 || hours24 > 23 || minutes < 0 || minutes > 59 || _ != ':') {
-        cerr << "输入错误!" << endl;
+        std::cerr << "输入错误!" << std::endl;
         exit(1);
     }
 #endif
@@ -41,11 +42,16 @@ void input(int& hours24, int& minutes)
 
 void convert(int& hours, char& ampm)
 {
+    //  [io]    int&    hours
+    //  [out]   char&   ampm
     ampm = hours < 12 ? 'A' : 'P';
     hours = (hours %= 12) == 0 ? 12 : hours;
 }
 
 void output(int hours, int minutes, char ampm)
 {
-    cout << "12 小时制时间 (h:m tt): " << hours << ":" << minutes << " " << ampm << ".M." << endl;
+    //          int     hours
+    //          int     minutes
+    //          char    ampm
+    std::cout << "12 小时制时间 (h:m tt): " << hours << ":" << minutes << " " << ampm << ".M." << std::endl;
 }
