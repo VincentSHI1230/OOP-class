@@ -255,7 +255,7 @@ C / C++ 仅要求函数需要在调用前声明，而不强求在调用前定义
 
 但是事实上，这种做法是错误的。`#include` 本质上是将文件的内容直接插入到当前文件中，而不是将文件编译为目标文件。这种操作不仅不是真正意义上的多文件结构，而且会导致重复定义的问题。
 
-> **正确的 [CMakeLists.txt]([OOP-class/exp02/exer3/CMakeLists.txt at main · VincentSHI1230/OOP-class (github.com)](https://github.com/VincentSHI1230/OOP-class/blob/main/exp02/exer3/CMakeLists.txt))**
+> **正确的 [CMakeLists.txt](https://github.com/VincentSHI1230/OOP-class/blob/main/exp02/exer3/CMakeLists.txt)**
 >
 > ```cmake
 > cmake_minimum_required(VERSION 3.27)
