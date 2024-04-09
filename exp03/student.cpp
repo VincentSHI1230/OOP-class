@@ -174,6 +174,11 @@ void Student::get(int key, double& value) const
     }
 }
 
+const char* Student::name() const
+{
+    return _name;
+}
+
 double Student::avg() const
 {
     return (_grade_comp + _grade_eng) / 2;

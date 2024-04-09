@@ -14,6 +14,7 @@ public:
     void get(int key, char& value) const;
     void get(int key, int& value) const;
     void get(int key, double& value) const;
+    const char* name() const;
     double avg() const;
 
 protected:
