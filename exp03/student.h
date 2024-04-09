@@ -3,10 +3,9 @@
 
 class Student {
 public:
-    Student(const char* name, const char* stu_id);
     Student(const char* name, const char* stu_id,
-        char gender, int age, const char* class_name,
-        double grade_comp, double grade_eng);
+        char gender = '\0', int age = -1, const char* class_name = "",
+        double grade_comp = -1, double grade_eng = -1);
     void set(int key, const char* value);
     void set(int key, char value);
     void set(int key, int value);

@@ -1,17 +1,6 @@
 #include "student.h"
 #include <iostream>
 
-Student::Student(const char* name, const char* stu_id)
-{
-    _name = name;
-    _stu_id = stu_id;
-    _gender = '\0';
-    _age = -1;
-    _class_name = "";
-    _grade_comp = -1;
-    _grade_eng = -1;
-}
-
 Student::Student(const char* name, const char* stu_id,
     char gender, int age, const char* class_name,
     double grade_comp, double grade_eng)
