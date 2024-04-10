@@ -1,13 +1,30 @@
 #include "student.h"
 #include <iostream>
+#include <string>
 
 int main()
 {
     // ================ 测试部分 ================
-    Student test("田所浩二", "0114514", 'M');
+    std::string name, stu_id;
+    char gender;
+    std::cout << "test:" << std::endl
+              << "\tname:";
+    std::cin >> name;
+    std::cout << "\tstu_id:";
+    std::cin >> stu_id;
+    std::cout << "\tgender:";
+    std::cin >> gender;
+    Student test(name, stu_id, gender);
+    std::cout << "\t(re) gender:";
+    std::cin >> gender;
+    test.set(GENDER, gender);
+    std::string gender_str;
+    std::cout << "\t(re | str) gender:";
+    std::cin >> gender_str;
+    test.set(GENDER, gender_str);
     test.set(AGE, 24);
     test.set(CLASS_NAME, "下北泽19班");
-    test.set(GRADE_COMP, 11.4);
+    test.set(GRADE_COMP, 114);
     test.set(GRADE_ENG, 51.4);
     int a;
     test.get(AGE, a);
@@ -15,7 +32,10 @@ int main()
     char g;
     test.get(GENDER, g);
     std::cout << "(测试) " << test.name() << "的性别: " << g << std::endl;
-    const char* cn;
+    std::string g_2;
+    test.get(GENDER, g_2);
+    std::cout << "(测试 | str_c) " << test.name() << "的性别: " << g_2 << std::endl;
+    std::string cn;
     test.get(CLASS_NAME, cn);
     std::cout << "(测试) " << test.name() << "的班级: " << cn << std::endl;
     double gc;
