@@ -32,10 +32,14 @@ void Student::set(int key, std::string value)
         _class_name = value;
         break;
     NUM_LIKE:
-        std::cerr << "Student::set(int key, std::string value)\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::set(int key, std::string value)\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, std::string value)\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::set(int key, std::string value)\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -46,12 +50,19 @@ void Student::set(int key, char value)
         _gender = value;
         _upd_gs();
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+#endif
     STR_LIKE:
     NUM_LIKE:
-        std::cerr << "Student::set(int key, char value)\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::set(int key, char value)\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, char value)\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::set(int key, char value)\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -67,11 +78,20 @@ void Student::set(int key, int value)
     case GRADE_ENG:
         _grade_eng = (double)value;
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+        _stu_id = std::to_string(value);
+        break;
+#endif
     TEXT_LIKE:
-        std::cerr << "Student::set(int key, int value)\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::set(int key, int value)\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, int value)\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::set(int key, int value)\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -87,11 +107,18 @@ void Student::set(int key, double value)
     case GRADE_ENG:
         _grade_eng = value;
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+#endif
     TEXT_LIKE:
-        std::cerr << "Student::set(int key, double value)\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::set(int key, double value)\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, double value)\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::set(int key, double value)\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -111,10 +138,14 @@ void Student::get(int key, std::string& value) const
         value = _class_name;
         break;
     NUM_LIKE:
-        std::cerr << "Student::get(int key, std::string& value) const\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::get(int key, std::string& value) const\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, std::string& value) const\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::get(int key, std::string& value) const\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -124,12 +155,19 @@ void Student::get(int key, char& value) const
     case GENDER:
         value = _gender;
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+#endif
     STR_LIKE:
     NUM_LIKE:
-        std::cerr << "Student::get(int key, char& value) const\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::get(int key, char& value) const\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, char& value) const\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::get(int key, char& value) const\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -145,11 +183,20 @@ void Student::get(int key, int& value) const
     case GRADE_ENG:
         value = (int)_grade_eng;
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+        value = std::stoi(_stu_id);
+        break;
+#endif
     TEXT_LIKE:
-        std::cerr << "Student::get(int key, int& value) const\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::get(int key, int& value) const\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, int& value) const\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::get(int key, int& value) const\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -165,11 +212,18 @@ void Student::get(int key, double& value) const
     case GRADE_ENG:
         value = _grade_eng;
         break;
+#ifdef ALLOW_INT_ID
+    case STU_ID:
+#endif
     TEXT_LIKE:
-        std::cerr << "Student::get(int key, double& value) const\n\t格式不匹配" << std::endl;
+        std::cerr << "Student::get(int key, double& value) const\n"
+                     "\t格式不匹配"
+                  << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, double& value) const\n\tkey 不存在" << std::endl;
+        std::cerr << "Student::get(int key, double& value) const\n"
+                     "\tkey 不存在"
+                  << std::endl;
     }
 }
 
@@ -195,6 +249,6 @@ void Student::_upd_gs()
     default:
         char g[2] = { _gender, '\0' };
         std::string gs(g);
-        _gender_str = "未知: " + gs;
+        _gender_str = "未知 (" + gs + ")";
     }
 }

@@ -1,5 +1,8 @@
 #ifndef STUDENT_H
 #define STUDENT_H
+
+#define ALLOW_INT_ID
+
 #include <string>
 
 class Student {
@@ -27,6 +30,7 @@ protected:
     std::string _class_name;
     double _grade_comp;
     double _grade_eng;
+
 private:
     std::string _gender_str;
     void _upd_gs();
@@ -40,10 +44,16 @@ private:
 #define GRADE_COMP 0x5
 #define GRADE_ENG 0x6
 
+#ifdef ALLOW_INT_ID
+#define STR_LIKE \
+    case NAME:   \
+    case CLASS_NAME
+#else
 #define STR_LIKE \
     case NAME:   \
     case STU_ID: \
     case CLASS_NAME
+#endif
 #define TEXT_LIKE \
     STR_LIKE:     \
     case GENDER
