@@ -32,13 +32,11 @@ void Student::set(int key, std::string value)
         _class_name = value;
         break;
     NUM_LIKE:
-        std::cerr << "Student::set(int key, std::string value)\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::set(int key, std::string value)\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, std::string value)\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::set(int key, std::string value)\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -55,13 +53,11 @@ void Student::set(int key, char value)
 #endif
     STR_LIKE:
     NUM_LIKE:
-        std::cerr << "Student::set(int key, char value)\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::set(int key, char value)\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, char value)\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::set(int key, char value)\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -84,13 +80,11 @@ void Student::set(int key, int value)
         break;
 #endif
     TEXT_LIKE:
-        std::cerr << "Student::set(int key, int value)\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::set(int key, int value)\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, int value)\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::set(int key, int value)\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -111,13 +105,11 @@ void Student::set(int key, double value)
     case STU_ID:
 #endif
     TEXT_LIKE:
-        std::cerr << "Student::set(int key, double value)\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::set(int key, double value)\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::set(int key, double value)\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::set(int key, double value)\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -138,13 +130,11 @@ void Student::get(int key, std::string& value) const
         value = _class_name;
         break;
     NUM_LIKE:
-        std::cerr << "Student::get(int key, std::string& value) const\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::get(int key, std::string& value) const\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, std::string& value) const\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::get(int key, std::string& value) const\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -160,13 +150,11 @@ void Student::get(int key, char& value) const
 #endif
     STR_LIKE:
     NUM_LIKE:
-        std::cerr << "Student::get(int key, char& value) const\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::get(int key, char& value) const\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, char& value) const\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::get(int key, char& value) const\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -189,13 +177,11 @@ void Student::get(int key, int& value) const
         break;
 #endif
     TEXT_LIKE:
-        std::cerr << "Student::get(int key, int& value) const\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::get(int key, int& value) const\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, int& value) const\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::get(int key, int& value) const\n\tkey 不存在"
                   << std::endl;
     }
 }
@@ -216,13 +202,11 @@ void Student::get(int key, double& value) const
     case STU_ID:
 #endif
     TEXT_LIKE:
-        std::cerr << "Student::get(int key, double& value) const\n"
-                     "\t格式不匹配"
+        std::cerr << "Student::get(int key, double& value) const\n\t格式不匹配"
                   << std::endl;
         break;
     default:
-        std::cerr << "Student::get(int key, double& value) const\n"
-                     "\tkey 不存在"
+        std::cerr << "Student::get(int key, double& value) const\n\tkey 不存在"
                   << std::endl;
     }
 }
