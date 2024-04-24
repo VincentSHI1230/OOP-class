@@ -206,6 +206,7 @@
 <td colspan="4"> - </td>
 <td> double avg </td>
 </table>
+
 > *注：仅当 `#define ALLOW_INT_ID` 生效时有效
 
 
