@@ -18,7 +18,7 @@ int main()
     Line expand_l;
     std::cout << "请输入坐标 (x1, y1, x2, y2): ";
     std::cin >> expand_l;
-    std::cout << l << std::endl;
+    std::cout << expand_l << std::endl;
 #endif // EXPAND
 
     return 0;
